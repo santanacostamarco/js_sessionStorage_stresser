@@ -1,7 +1,7 @@
 class SStrgStress {
 	constructor () {
 
-		this.stress(100)
+		this.stress(1000)
 	}
 
 	generateString(length) {
@@ -15,10 +15,9 @@ class SStrgStress {
 	}
 
 	stress (length) {
-		let stop = false;
 		let interval = setInterval(() => {
 			try {
-				sessionStorage.setItem(this.generateString(1000), this.generateString(1000));
+				sessionStorage.setItem(this.generateString(length), this.generateString(length));
 				console.log(sessionStorage.length);
 			}
 			catch (e) {
